@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Sistema de Controle de Estoque</title>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'plugins/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/ribbon/css/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/sweetalert/css/sweetalert2.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/datatable/css/jquery.dataTables.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/select2/css/select2.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/forged/css/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'plugins/forged/css/main.css' %}" type="text/css">
+   
+    {% block css %} {% endblock css %}
+
+    <script src="{% static 'plugins/jquery/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'plugins/select2/js/select2.js' %}"></script>
+    <script src="{% static 'plugins/datatable/js/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'plugins/sweetalert/js/sweetalert2.js' %}"></script>
+    <script src="{% static 'plugins/jquery-mask/jquery.mask.js' %}"></script>
+
+</head>
+
+<body>
+    <header class="navbar navbar-header navbar-header-fixed bg-blue-gradient">
+        <div class="navbar-brand">
+            <i id="sidebar_resize" class="fas fa-bars mg-r-10 mg-b-3 cursor-pointer text-white"></i>
+            <img src="{% static 'images/logo.png' %}" class="wd-100" >
+        </div>
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a id="mainMenuClose" href="#"><i data-feather="x"></i></a>
+            </div>
+            <div class="navbar-right">
+                <a href="/login" title="Log-out" class="btn btn-social cursor-pointer"><i class="fas fa-sign-out-alt text-white"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebarMenu" class="sidebar sidebar-fixed sidebar-components">
+        <div class="sidebar-body">
+            <ul class="sidebar-nav">
+                <li class="nav-label text-center mg-b-15 mg-t-15">Controle de Estoque</li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/store.png' %}"> Home</a>
+                </li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/cash-register.png' %}"> Caixa</a>
+                </li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/user.png' %}"> Usuários</a>
+                </li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/excel.svg' %}"> Relatorios</a>
+                </li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/question.png' %}"> Duvidas</a>
+                </li>
+                <li class="nav-item activate">
+                    <a href="/" class="nav-link"><img class="icon-menu-img" src="{% static 'images/icons/telephone.png' %}"> Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main" class="content content-components pd-0">
+        <div class="container">
+            {% block main %} {% endblock main %}
+
+        </div>
+    </div>
+    {% block scripts %} {% endblock scripts %}
+
+</body>
+</html>

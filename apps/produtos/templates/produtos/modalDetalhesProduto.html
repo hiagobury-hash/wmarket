@@ -1,0 +1,55 @@
+<div class="modal fade" id="modalDetalhesProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-12">
+                            <label for="detalhesDescProduto">Descrição</label>
+                            <input type="text" class="form-control" id="detalhesDescProduto" disabled>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="qtdProduto">Entrada</label>
+                            <input type="text" class="form-control number" id="detalhesEntrada" disabled>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="vlCompra">Saida</label>
+                            <input type="text" class="form-control money" id="detalhesSaida" disabled>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="vlCompra">Saldo</label>
+                            <input type="text" class="form-control money" id="detalhesSaldo" disabled>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-main table-responsive">
+                    <table id="datatableMovimentacaoProduto" class="table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Quantidade</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <td>Tipo</td>
+                                <td>Quantidade</td>
+                                <td>Data</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

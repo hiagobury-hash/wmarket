@@ -1,0 +1,70 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block main %} 
+
+{% csrf_token %}
+
+<nav class="ribbon-menu">
+    <ul class="tabs-holder">
+        <li class="active"><a href="#section">Opções</a></li>
+    </ul>
+    <div class="content-holder">
+        <div class="section active" id="section">
+            <div class="group">
+                <button id="novo_produto" class="ribbon-button">
+                    <span class="icon"><img src="{% static 'images/icons/add.svg' %}"></span>
+                    <span class="caption">Novo Produto</span>
+                </button>
+                <button id="compra_produtos" class="ribbon-button">
+                    <span class="icon"><img src="{% static 'images/icons/money.svg' %}"></span>
+                    <span class="caption">Compra de Produtos</span>
+                </button>
+                <button id="list_comprados" class="ribbon-button">
+                    <span class="icon"><img src="{% static 'images/icons/list.svg' %}"></span>
+                    <span class="caption">Produtos Comprados</span>
+                </button>
+                <span class="title">Compra</span>
+            </div>
+            <div class="group">
+                <button id="venda_produtos" class="ribbon-button">
+                    <span class="icon"><img src="{% static 'images/icons/trade.svg' %}"></span>
+                    <span class="caption">Venda de Produtos</span>
+                </button>
+                 <button id="list_vendidos" class="ribbon-button">
+                    <span class="icon"><img src="{% static 'images/icons/list.svg' %}"></span>
+                    <span class="caption">Produtos Vendidos</span>
+                </button>
+                <span class="title">Venda</span>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="table-main table-responsive pd-20">
+    <table id="datatableEstoqueProdutos" class="table">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Entrada</th>
+                <th>Saida</th>
+                <th>Saldo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <td>Descrição</td>
+                <td>Entrada</td>
+                <td>Saida</td>
+                <td>Saldo</td>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+{% endblock main %} 
+
+{% block scripts %}
+    <script src="{% static 'produtos/main.js' %}" type="module"></script>
+{% endblock scripts %}

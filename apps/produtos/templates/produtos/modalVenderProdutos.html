@@ -1,0 +1,37 @@
+<div class="modal fade" id="modalVenderProdutos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Vender Produtos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-12">
+                            <label for="venderDescProduto">Descrição</label>
+                            <select type="text" class="form-control" id="venderDescProduto"></select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="venderQtdProduto">Quantidade</label>
+                            <input type="text" class="form-control number" id="venderQtdProduto">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="venderVlVenda">Valor Unitário</label>
+                            <input type="text" class="form-control money" id="venderVlVenda">
+                        </div>
+                    </div>
+                </form>
+                <a type="button" class="btn btn-success float-left text-white mr-1" id="saldoVenda">Saldo:</a>
+                <a type="button" class="btn btn-info float-left text-white" id="mediaVenda">Média de Venda:</a>
+                <a type="button" class="btn btn-danger float-right text-white" id="vdMediaCompra">Média de Compra:</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button id="salvarMovimentacaoEstoqueVenda" type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
