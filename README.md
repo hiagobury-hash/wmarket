@@ -8,7 +8,7 @@
 ## Instalação
 
 - https://github.com/hiagobury-hash/wmarket.git
-- pip install -r requirements-dev.txt.
+- pip install -r requirements.txt.
 - Não é necessario fazer migrate
 
 
